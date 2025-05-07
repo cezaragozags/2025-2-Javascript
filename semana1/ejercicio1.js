@@ -5,9 +5,10 @@ const { ask } = require('../helpers/input');
 async function main() {
   const name = await ask("¿Cómo te llamas? ");
   const age = Number(await ask("¿Cuántos años tienes? "));
+  const food = await ask("¿Cual es tu comida favorita? ");
   // TODO : Agregar pregunta para comida favorita
 
-  console.log("Hola " + name + ", tienes " + age + " años.");
+  console.log("Hola " + name + ", tienes " + age + " años, tu comida favorita es: " + food);
   //console.log(`Tu comida favorita es ${comida}.`);
 }
 
