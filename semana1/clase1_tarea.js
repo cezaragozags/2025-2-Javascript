@@ -19,6 +19,7 @@ async function main() {
   console.log('Resta: ' + resta);
   console.log('Multiplicacion: ' + multiplicacion);
   console.log('Division: ' + division);*/
+
   // TODO: Mostrar el resultado de la resta, multiplicación y división
 
 }

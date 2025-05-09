@@ -10,6 +10,7 @@ async function main() {
 
   console.log("Hola " + name + ", tienes " + age + " años, tu comida favorita es: " + food);
   //console.log(`Tu comida favorita es ${comida}.`);
+
 }
 
 main();
