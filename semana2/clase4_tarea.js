@@ -12,3 +12,47 @@
 //Promedio general
 //
 //La calificación más alta y la más baja
+
+const { ask } = require("../helpers/input");
+
+async function main() {
+  function analizarCalificaciones(calificaciones) {
+    let aprobados = 0;
+    let reprobados = 0;
+    let suma = 0;
+    let maxima = calificaciones[0];
+    let minima = calificaciones[0];
+
+    for (let cal of calificaciones) {
+      if (cal >= 70) {
+        aprobados++;
+      } else {
+        reprobados++;
+      }
+
+      suma += cal;
+      if (cal > maxima) {
+        maxima = cal;
+      }
+      if (cal < minima) {
+        minima = cal;
+      }
+    }
+
+    let promedio = suma / calificaciones.length;
+
+    return {
+      aprobados: aprobados,
+      reprobados: reprobados,
+      promedio: promedio,
+      maxima: maxima,
+      minima: minima
+    };
+  }
+  
+    const calificaciones = [85, 60, 78, 92, 55, 70, 89, 45];
+    const resultado = analizarCalificaciones(calificaciones);
+    console.log(resultado);
+}
+
+main();
